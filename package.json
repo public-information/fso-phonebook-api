@@ -1,0 +1,26 @@
+{
+  "name": "fso-phonebook-api",
+  "version": "1.0.0",
+  "description": "Full Stack Open Part 3 Phonebook api backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/public-information/fso-phonebook-api.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/public-information/fso-phonebook-api/issues"
+  },
+  "homepage": "https://github.com/public-information/fso-phonebook-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

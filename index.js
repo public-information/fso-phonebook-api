@@ -34,10 +34,6 @@ const matchingPersons = (newName) => {
     )
 }
 
-app.get('/', (request, response) => {
-    response.status(200).send('<h1>phonebook</h1>')
-})
-
 app.get('/api/persons', (request, response) => {
     response.status(200).send(persons)
 })

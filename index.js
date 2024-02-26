@@ -1,9 +1,11 @@
+const logging = require('./logging')
 const express = require('express')
 
 const app = express()
 const PORT = 3001
 
 app.use(express.json())
+app.use(logging.requestDataLogger)
 
 let persons = [
     {
@@ -50,7 +52,7 @@ app.post('/api/persons', (request, response) => {
             case !person.name || !person.number:
                 return response.status(400).send({error: 'Missing input'})
             case match >= 1:
-                return response.status(400).send({error: 'Name must be unique'})
+                return response.status(409).send({error: 'Name must be unique'})
         }
     })()
 })
